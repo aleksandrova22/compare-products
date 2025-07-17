@@ -1,0 +1,30 @@
+.list {
+margin: 10px;
+
+& button {
+  
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(72, 73, 72);
+    margin: 10px;
+}
+
+
+& ol {
+  border: 1px solid gray;
+  font-size: large;
+  margin: 5px;
+}
+
+}
+
+.title {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(75, 74, 74);
+}

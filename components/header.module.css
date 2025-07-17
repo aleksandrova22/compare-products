@@ -1,0 +1,57 @@
+.header {
+  display: none;
+  justify-content: flex-start;
+  padding: 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  gap: 5px;
+  top: 0px;
+ }
+
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 5px;
+    top: 0px;
+
+  }
+
+
+
+}
+
+
+
+
+@keyframes blink {
+ 0% {
+  opacity: 1;
+    visibility: visible;
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

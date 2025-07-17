@@ -1,42 +1,255 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+* Global
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid grey; */
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+/*
+* My
+*/
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+h1 {
+  color: var(--color-green);
+  margin: 5px;
+  padding: 5px;
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+h2 {
+  color: green;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(238, 243, 239);
+  font-size: large;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+
+  & div {
+    display: flex;
+    justify-content: flex-end;
+    color: #064523;
+    padding: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+
+  & nav ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & li {
+      padding: .5em;
+      margin-inline: 5px;
+      border-radius: 10px;
+      /* flex: 1 0; */
+      text-align: center;
+
+      &.active {
+        background-color: #0c8343;
+      }
+
+      &:hover {
+        background-color: rgb(38, 191, 41);
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2);
+      }
+    }
   }
 }
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+header,
+footer {
+  @apply bg-green-500 dark:bg-green-700 text-white
+}
+
+/* select {
+  @apply bg-green-400 dark:bg-green-950 text-gray-300
+} */
+
+header, footer {
+  @apply flex flex-wrap justify-between;
+}
+
+main {
+  @apply justify-items-center;
+  flex: 1 1 auto;
+  height: min(100%, 1200px);
+
+  /* padding: 30px; */
+}
+
+:link {
+  text-decoration: underline transparent;
+  transition: text-decoration-color 3s,
+}
+
+/* 
+:link:hover {
+  text-decoration-color: currentColor;
+} */
+
+/* 
+p {
+  font-size: 0.8rem;
+  color: var(--color-light);
+} */
+
+/* p+p {
+  margin-top: 12px;
+} */
+
+
+h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #064523;
+}
+
+.button-row {
+  display: flex;
+  margin-top: 12px;
+  transition: all 150ms;
+  border-radius: 10px;
+  background-color: var(--color-darker);
+}
+
+.button-row>.button,
+.button-row>button {
+  flex: 1 1 auto;
+}
+
+.button-row>.button:not(:first-child),
+.button-row>button:not(:first-child) {
+  margin-left: 12px;
+}
+
+button,
+.button,
+input[type="text"] {
+  border-radius: 8px;
+  border: 1px;
+  padding: 0.4em 1em;
+  /* font-size: 0.8rem; */
+  /* font-weight: 500; */
+  font-family: inherit;
+  /* background-color: var(--color-darker); */
+  color: var(--color-light);
+  cursor: pointer;
+  /* transition: all 150ms; */
+
+}
+
+/* button:disabled, */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button span {
+  display: block;
+  font-weight: 300;
+}
+
+button img,
+.button img {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+}
+
+button:has(img),
+.button:has(img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background: var(--color-dark);
+  color: var(--color-lightest);
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body:has(.auth) .todo__show-mine {
+  display: block;
+}
+
+input[type="text"] {
+  cursor: text;
+}
+
+#root {
+  opacity: 0;
+  animation: fadeIn 300ms ease-out 300ms forwards;
+}
+
+
