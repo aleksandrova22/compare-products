@@ -131,8 +131,11 @@ main {
   @apply justify-items-center;
   flex: 1 1 auto;
   height: min(100%, 1200px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-  /* padding: 30px; */
+ 
 }
 
 :link {
@@ -140,20 +143,6 @@ main {
   transition: text-decoration-color 3s,
 }
 
-/* 
-:link:hover {
-  text-decoration-color: currentColor;
-} */
-
-/* 
-p {
-  font-size: 0.8rem;
-  color: var(--color-light);
-} */
-
-/* p+p {
-  margin-top: 12px;
-} */
 
 
 h3 {

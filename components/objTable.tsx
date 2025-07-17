@@ -91,7 +91,7 @@ export function ObjTable({ data }: { data: Product[] }) {
         count = useSelector(selectCount),
         dispatch = useDispatch();
    // console.log('selectIndex и  selectElemForExchange:', element, elemForExchange);
-
+ console.log('ghhghghg', products.length, data.length);
   
     return <>
         <div className={classes.container}>
@@ -114,18 +114,20 @@ export function ObjTable({ data }: { data: Product[] }) {
                             <th key={c.id + Math.random()}>
                                 <Image src={"/" + c?.photo} width={200} height={200} alt="Product" priority={true} />
                                
-                                
-                                        <button onClick={(event) => {
-
+                               { 
+                              
+                               (data.length < products.length) &&
+                                       ( <button onClick={(event) => {
                                             handleButtonClick(event, index);
                                             dispatch(exchanged(c.id));   //запоминаем элемент на котором выбор
-
-                                        }}> 🔻 </button>
+                                        }}> 🔻 </button>)
                                    
-                              
+                                    }
 
                             </th>
                         ))}
+
+                      
                     </tr>
                 </thead>
 

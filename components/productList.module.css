@@ -1,8 +1,9 @@
 .list {
-margin: 10px;
+  margin: 10px;
+ 
 
-& button {
-  
+  & button {
+
     border: 1px solid gray;
     border-radius: 5px;
     font-size: small;
@@ -10,14 +11,14 @@ margin: 10px;
     color: white;
     background-color: rgb(72, 73, 72);
     margin: 10px;
-}
+  }
 
 
-& ol {
-  border: 1px solid gray;
-  font-size: large;
-  margin: 5px;
-}
+  & ol {
+    border: 1px solid gray;
+    font-size: large;
+    margin: 5px;
+  }
 
 }
 
